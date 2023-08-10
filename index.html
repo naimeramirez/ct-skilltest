@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Los Angeles Mountains</title>
+    <script src="js/ct-skilltest.js" defer></script>
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/ct-skilltest.css">
 </head>
@@ -105,13 +106,13 @@
 
 <div class="tab-section">
     <div class="tab-container">
-        <ul class="tabs-list" aria-labelledby="tabs-title">
-            <li class="tabs"><a id="tab-1" href="#mountain1">MOUNTAIN 1</a></li>
-            <li class="tabs"><a id="tab-2" href="#mountain2">MOUNTAIN 2</a></li>
+        <ul class="tabs-list">
+            <li class="tabs active" data-tab-target="#mountain1">MOUNTAIN 1</li>
+            <li class="tabs" data-tab-target="#mountain2">MOUNTAIN 2</li>
         </ul>
 
         <div class="tabs-panels flow">
-            <div id="mountain1" aria-labelledby="tab-1">
+            <div id="mountain1" data-tab-content class="active">
 
                 <div class="tab-content">
                     <div class="schedule-container">
@@ -136,7 +137,7 @@
                 </div>
 
             </div>
-            <div id="mountain2" aria-labelledby="tab-2">
+            <div id="mountain2" data-tab-content>
 
                 <div class="tab-content">
                     <div class="schedule-container">
