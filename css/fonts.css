@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'bebas';
+    src: url('./assets/fonts/Bebas-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'oswald';
+    src: url('./assets/fonts/oswald-bold.woff2') format('woff2'),
+    url('./assets/fonts/oswald-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bebas_neue';
+    src: url('./assets/fonts/bebasneue-regular.woff2') format('woff2'),
+    url('./assets/fonts/bebasneue-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url('./assets/fonts/lato-light.woff2') format('woff2'),
+    url('./assets/fonts/lato-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url('./assets/fonts/lato-blackitalic.woff2') format('woff2'),
+    url('./assets/fonts/lato-blackitalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
