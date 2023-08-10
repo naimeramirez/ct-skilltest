@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /*hero section*/
 .hero {
     background-color: #414f6b;
@@ -45,7 +49,6 @@
     letter-spacing: 1px;
     color: #fefeff;
     margin-right: 20px;
-    border-bottom: #fefeff solid 1px;
     height: auto;
 }
 
@@ -68,7 +71,6 @@
     letter-spacing: 1px;
     color: #414f6b;
     margin-right: 20px;
-    border-bottom: #414f6b solid 1px;
     height: auto;
 }
 
@@ -122,10 +124,8 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-}
-
-.section-1 {
     height: 100vh;
+    scroll-margin-top: 73.5px;
 }
 
 .section1-paragraph {
@@ -136,6 +136,10 @@
 }
 
 /*section 2*/
+.section-2 {
+    scroll-margin-top: 73.5px;
+}
+
 .section2-paragraph {
     font-family: 'lato', sans-serif;
     font-size: 16px;
@@ -172,7 +176,7 @@
     cursor: pointer;
 }
 
-.active {
+.active-link {
     background-color: #b0b4be;
     color: #414f6b;
     text-decoration: underline;
@@ -226,6 +230,7 @@
 .schedule-table {
     font-family: 'lato', sans-serif;
     font-size: 16px;
+    text-decoration: none;
     list-style-type: none;
     display: grid;
     grid-template-columns: 1fr 1fr;

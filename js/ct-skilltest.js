@@ -9,9 +9,9 @@ tabs.forEach(tab => {
             tabContent.classList.remove('active')
         })
         tabs.forEach(tab => {
-            tab.classList.remove('active')
+            tab.classList.remove('active-link')
         })
-        tab.classList.add('active')
+        tab.classList.add('active-link')
         target.classList.add('active')
     })
 })
