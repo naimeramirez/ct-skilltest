@@ -24,8 +24,11 @@
     padding-top: 10px;
 }
 
-.logo {
+#logo {
     width: 50px;
+    height: 50px;
+    outline: #bcc3c6 solid 1px;
+    border-radius: 50%;
 }
 
 .nav-links {
@@ -34,7 +37,7 @@
     align-items: center;
 }
 
-.nav-links p {
+.nav-link {
     font-family: 'lato', sans-serif;
     font-weight: bold;
     font-style: italic;
@@ -47,9 +50,38 @@
 }
 
 /*sticky nav*/
+.sticky-logo {
+    display: flex;
+}
 
+.sticky-link {
+    font-family: 'lato', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #414f6b;
+    margin-right: 20px;
+    border-bottom: #414f6b solid 2px;
+    height: auto;
+}
 
+.nav-title {
+    font-family: 'bebas_neue', sans-serif;
+    letter-spacing: 1px;
+}
 
+.los-angeles {
+    color: #4d4d4d;
+    font-size: 27px;
+    margin: 0 10px -10px;
+}
+
+.mountains {
+    color: #414f6b;
+    font-size: 29px;
+    margin: -10px 10px 0;
+}
 
 /*bg1*/
 
