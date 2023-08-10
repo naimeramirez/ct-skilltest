@@ -87,7 +87,6 @@
 .section-content {
     max-width: 1000px;
     margin: 0 auto;
-    padding-top: 10px;
 }
 
 .section-titles {
@@ -138,3 +137,112 @@
     margin: auto 0;
 }
 
+.section-2 .section-content {
+    padding-left: 150px;
+}
+
+/*tabs*/
+
+.tab-container {
+    width: 100vw;
+    background-color: #414f6b;
+}
+
+.tabs-list {
+    list-style-type: none;
+    font-family: 'oswald', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tabs {
+    margin: 10px 20px;
+}
+
+#tab-1, #tab-2 {
+    color: #b0b4be;
+    text-decoration: none;
+}
+
+#mountain1 {
+    background-color: #fefeff;
+    background-image: url("../assets/img/tab1-bg.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#mountain2 {
+    background-color: #fefeff;
+    background-image: url("../assets/img/tab2-bg.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.tab-content {
+    max-width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-left: 180px;
+}
+
+.schedule-container {
+    background-color: rgba(254, 254, 255, 70%);
+    padding: 20px 30px;
+    width: 250px;
+}
+
+.tab-title {
+    font-family: 'oswald', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: #414f6b;
+}
+
+.schedule-table {
+    font-family: 'lato', sans-serif;
+    font-size: 16px;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*footer*/
+.footer-section {
+    background-color: #414f6b;
+}
+
+.footer-container {
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 30px 0;
+    opacity: .2;
+}
+
+.footer-la {
+    color: #fefeff;
+    font-size: 27px;
+    margin: 0 10px -10px;
+}
+
+.footer-mtn {
+    color: #fefeff;
+    font-size: 29px;
+    margin: -10px 10px 0;
+}
+
+.copyright {
+    font-family: 'lato', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #fefeff;
+}
