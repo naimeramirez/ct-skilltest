@@ -1,7 +1,23 @@
 // carousel
 const carousel = document.querySelector('.carousel');
+const firstImg = carousel.querySelectorAll('img')[0];
+const carouselIcons = document.querySelectorAll('.carousel-control i');
 
 let isDragStart = false, prevPageX, prevScrollLeft;
+let firstImgWidth = firstImg.clientWidth;
+
+carouselIcons.forEach((icon => {
+    icon.addEventListener('click', () => {
+        if (icon.id === 'left') {
+            carousel.scrollLeft = 0;
+        } else if (icon.id === 'right') {
+            carousel.scrollLeft = carousel.scrollWidth;
+        } else if (icon.id === 'middle') {
+            const middle = carousel.scrollWidth / 2;
+            carousel.scrollLeft = middle;
+        }
+    })
+}))
 
 const dragStart = (e) => {
     isDragStart = true;
