@@ -126,6 +126,9 @@ html {
     background-repeat: no-repeat;
     height: 100vh;
     scroll-margin-top: 73.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .section1-paragraph {
@@ -134,6 +137,62 @@ html {
     padding: 0 75px;
     margin-top: -45px;
 }
+
+/*carousel*/
+.carousel-section {
+    background-color: rgba(65, 79, 107, 75%);
+}
+
+.wrapper {
+    margin: 20px auto;
+}
+
+.wrapper .carousel {
+    max-width: 1000px;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.carousel img {
+    height: 135px;
+    object-fit: cover;
+    margin: 0 5px;
+    width: calc(95% / 4);
+    cursor: pointer;
+}
+
+.carousel-control {
+    display: flex;
+    justify-content: center;
+    margin: 5px auto 0;
+}
+
+.carousel-control i {
+    margin: 0 5px;
+    height: 7px;
+    width: 7px;
+    background-color: #fefeff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 950px){
+    .carousel img {
+        width: calc(95% / 3);
+    }
+}
+@media screen and (max-width: 650px){
+    .carousel img {
+        width: calc(95% / 2);
+    }
+}
+@media screen and (max-width: 350px){
+    .carousel img {
+        width: calc(95%);
+    }
+}
+
 
 /*section 2*/
 .section-2 {
