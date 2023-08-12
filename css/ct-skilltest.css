@@ -152,6 +152,7 @@ html {
     margin: 0 auto;
     white-space: nowrap;
     overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 .carousel img {
@@ -177,17 +178,19 @@ html {
     cursor: pointer;
 }
 
-@media screen and (max-width: 950px){
+@media screen and (max-width: 950px) {
     .carousel img {
         width: calc(95% / 3);
     }
 }
-@media screen and (max-width: 650px){
+
+@media screen and (max-width: 650px) {
     .carousel img {
         width: calc(95% / 2);
     }
 }
-@media screen and (max-width: 350px){
+
+@media screen and (max-width: 420px) {
     .carousel img {
         width: calc(95%);
     }
@@ -202,12 +205,28 @@ html {
 .section2-paragraph {
     font-family: 'lato', sans-serif;
     font-size: 16px;
-    padding: 0 40px;
+    padding: 20px 40px;
     margin: auto 0;
 }
 
-.section-2 .section-content {
-    padding-left: 150px;
+.section2-paragraph-sm {
+    display: none;
+}
+
+@media screen and (max-width: 420px) {
+    .section-titles{
+        justify-content: center;
+    }
+
+    .section2-paragraph {
+        display: none;
+    }
+
+    .section2-paragraph-sm {
+        display: block;
+        padding: 0 50px 40px;
+        margin-top: -40px;
+    }
 }
 
 /*tabs*/
@@ -279,7 +298,7 @@ html {
     width: 250px;
 }
 
-.tab-title {
+.title {
     font-family: 'oswald', sans-serif;
     font-weight: bold;
     font-size: 32px;
@@ -293,6 +312,79 @@ html {
     list-style-type: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+/*accordion*/
+@media screen and (min-width: 651px) {
+    .accordion-section {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .tab-section {
+        display: none;
+    }
+}
+
+.accordion {
+    max-width: 550px;
+    background-color: #414f6b;
+
+}
+
+.accordion-item {
+    width: 100vw;
+    background-color: #b0b4be;
+    border-bottom: #fefeff 1px solid;
+}
+
+.content1 {
+    display: flex;
+    justify-content: center;
+    background-color: #fefeff;
+    background-image: url("../assets/img/tab1-bg.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.content2 {
+    display: flex;
+    justify-content: center;
+    background-color: #fefeff;
+    background-image: url("../assets/img/tab2-bg.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.accordion-tab {
+    list-style-type: none;
+    font-family: 'oswald', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #414f6b;
+}
+
+.accordion-tab::after {
+    content: "\002b";
+}
+
+.accordion-tab.active::after {
+    content: "\2212";
+}
+
+.accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 /*footer*/

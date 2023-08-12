@@ -1,10 +1,8 @@
 // carousel
 const carousel = document.querySelector('.carousel');
-const firstImg = carousel.querySelectorAll('img')[0];
 const carouselIcons = document.querySelectorAll('.carousel-control i');
 
 let isDragStart = false, prevPageX, prevScrollLeft;
-let firstImgWidth = firstImg.clientWidth;
 
 carouselIcons.forEach((icon => {
     icon.addEventListener('click', () => {
@@ -13,8 +11,8 @@ carouselIcons.forEach((icon => {
         } else if (icon.id === 'right') {
             carousel.scrollLeft = carousel.scrollWidth;
         } else if (icon.id === 'middle') {
-            const middle = carousel.scrollWidth / 2;
-            carousel.scrollLeft = middle;
+            const middlePosition = (carousel.scrollWidth - carousel.clientWidth) / 2;
+            carousel.scrollLeft = middlePosition;
         }
     })
 }))
@@ -39,6 +37,32 @@ const dragStop = () => {
 carousel.addEventListener('mousedown', dragStart);
 carousel.addEventListener('mousemove', dragging);
 carousel.addEventListener('mouseup', dragStop);
+
+
+// accordion
+const accordionTab = document.querySelectorAll('.accordion-tab');
+
+accordionTab.forEach(accordionTab => {
+    accordionTab.addEventListener('click', e => {
+
+        const currentlyActive = document.querySelector('.accordion-tab.active');
+
+        if (currentlyActive && currentlyActive !== accordionTab) {
+            currentlyActive.classList.toggle('active');
+            currentlyActive.nextElementSibling.style.maxHeight = 0;
+        }
+
+        accordionTab.classList.toggle('active');
+        const accordionItemBody = accordionTab.nextElementSibling;
+        if (accordionTab.classList.contains('active')) {
+            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px';
+        } else {
+            accordionItemBody.style.maxHeight = 0;
+        }
+    })
+})
+
+
 
 // tabs
 const tabs = document.querySelectorAll('[data-tab-target]');
