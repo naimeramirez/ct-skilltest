@@ -10,14 +10,13 @@ html {
 /*hero section*/
 .hero {
     background-color: #414f6b;
-    background-image: url("../assets/img/hero.png");
+    background-image: url("../assets/img/clouds.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-}
-
-.hero-content {
+    z-index: 1;
     height: 100vh;
+    position: relative;
 }
 
 .nav {
@@ -52,11 +51,61 @@ html {
     height: auto;
 }
 
+.mountainsImg {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.hero-title {
+    font-family: 'bebas_neue', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.hero-title1 {
+    font-size:150px;
+    color: #4d4d4d;
+    margin-bottom: -50px;
+}
+
+.hero-title2 {
+    font-size: 160px;
+    color: #414f6b;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    .hero-title1 {
+        font-size: 19vw;
+        color: #4d4d4d;
+        margin-bottom: -6.5vw;
+    }
+
+    .hero-title2 {
+        font-size: 20.9vw;
+        color: #414f6b;
+    }
+}
+
+
 /*sticky nav*/
 .sticky-nav {
     position: sticky;
     top: 0;
     background-color: #fefeff;
+    z-index: 10;
 }
 
 .sticky-logo {
